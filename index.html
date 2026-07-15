@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sergi López Vergara — Actuario | Solvencia II, IFRS17 & Datos</title>
+  <meta name="description" content="Actuario especializado en Solvencia II, IFRS17, provisiones de vida y auditoría actuarial. Disponible para proyectos freelance de modelización, validación y análisis de datos.">
+  <meta name="author" content="Sergi López Vergara">
+  <!-- Open Graph: cómo se ve al compartir en LinkedIn/WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sergi López Vergara — Actuario freelance">
+  <meta property="og:description" content="Solvencia II, IFRS17, provisiones de vida y análisis de datos actuariales.">
+  <style>
+    /* ===================== TEMA / VARIABLES ===================== */
+    :root {
+      --bg: #ffffff;
+      --bg-soft: #f5f6f8;
+      --card: #ffffff;
+      --text: #1a1d21;
+      --text-soft: #565d67;
+      --border: #e4e7eb;
+      --accent: #2f6df6;
+      --accent-soft: #eaf1ff;
+      --shadow: 0 1px 3px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.05);
+      --radius: 14px;
+      --maxw: 960px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1216;
+        --bg-soft: #151a20;
+        --card: #171c22;
+        --text: #e8eaed;
+        --text-soft: #9aa3ad;
+        --border: #262d36;
+        --accent: #5b8bff;
+        --accent-soft: #17233d;
+        --shadow: 0 1px 3px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.4);
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+    section { padding: 72px 0; }
+    h2 { font-size: 1.6rem; margin-bottom: 8px; letter-spacing: -.02em; }
+    .section-sub { color: var(--text-soft); margin-bottom: 32px; }
+
+    /* ===================== NAV ===================== */
+    header.nav {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(10px);
+      background: color-mix(in srgb, var(--bg) 85%, transparent);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 62px; }
+    .brand { font-weight: 700; letter-spacing: -.02em; }
+    .nav-links { display: flex; gap: 26px; }
+    .nav-links a { color: var(--text-soft); font-size: .95rem; }
+    .nav-links a:hover { color: var(--text); text-decoration: none; }
+    @media (max-width: 680px) { .nav-links { display: none; } }
+
+    /* ===================== HERO ===================== */
+    .hero { padding: 90px 0 64px; }
+    .hero-badge {
+      display: inline-block; font-size: .82rem; font-weight: 600;
+      color: var(--accent); background: var(--accent-soft);
+      padding: 5px 12px; border-radius: 999px; margin-bottom: 20px;
+    }
+    .hero h1 { font-size: clamp(2rem, 6vw, 3.2rem); line-height: 1.08; letter-spacing: -.03em; margin-bottom: 18px; }
+    .hero h1 span { color: var(--accent); }
+    .hero p.lead { font-size: 1.15rem; color: var(--text-soft); max-width: 640px; margin-bottom: 30px; }
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 11px 20px; border-radius: 10px; font-weight: 600; font-size: .95rem;
+      border: 1px solid var(--border); transition: transform .12s ease, box-shadow .12s ease;
+    }
+    .btn:hover { text-decoration: none; transform: translateY(-1px); }
+    .btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .btn-ghost { background: var(--card); color: var(--text); }
+
+    /* ===================== CARDS / GRID ===================== */
+    .grid { display: grid; gap: 18px; }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 760px) { .grid-3, .grid-2 { grid-template-columns: 1fr; } }
+    .card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow);
+    }
+    .card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+    .card p { color: var(--text-soft); font-size: .95rem; }
+    .card .icon { font-size: 1.6rem; margin-bottom: 12px; display: block; }
+    .soft-section { background: var(--bg-soft); }
+
+    /* ===================== SOBRE MÍ ===================== */
+    .about { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: start; }
+    @media (max-width: 760px) { .about { grid-template-columns: 1fr; } }
+    .avatar {
+      width: 100%; aspect-ratio: 1; border-radius: 20px;
+      background: linear-gradient(135deg, var(--accent), #8a5bff);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3rem; color: #fff; font-weight: 700; letter-spacing: -.03em;
+    }
+    .skills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .chip {
+      font-size: .85rem; padding: 5px 12px; border-radius: 999px;
+      background: var(--bg-soft); border: 1px solid var(--border); color: var(--text-soft);
+    }
+
+    /* ===================== EXPERIENCIA (TIMELINE) ===================== */
+    .exp-item {
+      display: grid; grid-template-columns: 200px 1fr; gap: 24px;
+      padding: 26px 0; border-top: 1px solid var(--border);
+    }
+    .exp-item:first-child { border-top: none; padding-top: 4px; }
+    @media (max-width: 680px) { .exp-item { grid-template-columns: 1fr; gap: 8px; } }
+    .exp-meta .exp-date { font-size: .82rem; font-weight: 600; color: var(--accent); }
+    .exp-meta .exp-place { font-size: .9rem; color: var(--text-soft); margin-top: 2px; }
+    .exp-body h3 { font-size: 1.12rem; margin-bottom: 4px; }
+    .exp-body .exp-role { color: var(--text-soft); font-size: .95rem; margin-bottom: 12px; }
+    .exp-body ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+    .exp-body li { position: relative; padding-left: 20px; color: var(--text-soft); font-size: .95rem; }
+    .exp-body li::before {
+      content: ""; position: absolute; left: 2px; top: .62em;
+      width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
+    }
+    .exp-body li b { color: var(--text); font-weight: 600; }
+
+    /* ===================== EDUCACIÓN ===================== */
+    .edu-item { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; }
+    .edu-item + .edu-item { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border); }
+    .edu-item .edu-title { font-weight: 600; }
+    .edu-item .edu-detail { color: var(--text-soft); font-size: .95rem; }
+    .edu-item .edu-year { color: var(--accent); font-weight: 600; font-size: .85rem; white-space: nowrap; }
+
+    /* ===================== CONTACTO ===================== */
+    .contact { text-align: center; }
+    .contact h2 { font-size: 2rem; }
+    .contact .cta-row { margin-top: 20px; }
+
+    /* ===================== FOOTER ===================== */
+    footer { border-top: 1px solid var(--border); padding: 32px 0; color: var(--text-soft); font-size: .9rem; }
+    .foot-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  </style>
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <div class="brand">Sergi López<span style="color:var(--accent)">.</span></div>
+      <nav class="nav-links">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="hero-badge">✦ Disponible para proyectos freelance</span>
+      <h1>Soy Sergi, actuario.<br>Convierto <span>riesgo y datos</span> en decisiones fiables.</h1>
+      <p class="lead">
+        Especializado en Solvencia II, IFRS17 y provisiones de vida, con experiencia
+        en auditoría actuarial de compañías cotizadas. Combino el rigor actuarial con
+        la programación en Python para modelizar, validar y automatizar cálculos.
+      </p>
+      <div class="cta-row">
+        <a href="#contacto" class="btn btn-primary">Trabajemos juntos →</a>
+        <a href="CV-Sergi-Lopez-Vergara.pdf" class="btn btn-ghost" download>⬇ Descargar CV (PDF)</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SOBRE MÍ ===================== -->
+  <section id="sobre-mi" class="soft-section">
+    <div class="wrap">
+      <div class="about">
+        <div class="avatar">SLV</div>
+        <div>
+          <h2>Sobre mí</h2>
+          <p class="section-sub">Quién soy y en qué puedo ayudarte.</p>
+          <p style="color:var(--text-soft)">
+            Actuario con experiencia en el sector asegurador, enfocado principalmente en
+            los marcos de Solvencia II, IFRS4 e IFRS17. He participado en auditorías
+            actuariales de estados financieros de compañías cotizadas, especializándome en
+            el cálculo y validación de provisiones matemáticas de vida, la revisión de
+            módulos de SCR y el análisis de estados financieros consolidados.
+          </p>
+          <p style="color:var(--text-soft); margin-top:12px">
+            Compagino las Ciencias Actuariales con mi interés por la tecnología y la
+            programación, lo que me permite automatizar cálculos y aportar soluciones
+            reproducibles allí donde antes había procesos manuales.
+          </p>
+          <div class="skills">
+            <span class="chip">Solvencia II</span>
+            <span class="chip">IFRS17</span>
+            <span class="chip">IFRS4</span>
+            <span class="chip">Provisiones de vida</span>
+            <span class="chip">SCR</span>
+            <span class="chip">Auditoría actuarial</span>
+            <span class="chip">Python</span>
+            <span class="chip">NumPy · Pandas · Polars</span>
+            <span class="chip">R</span>
+            <span class="chip">SAS</span>
+            <span class="chip">Excel avanzado</span>
+            <span class="chip">LaTeX</span>
+            <span class="chip">Git</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICIOS ===================== -->
+  <section id="servicios">
+    <div class="wrap">
+      <h2>Servicios</h2>
+      <p class="section-sub">En qué puedo ayudar a tu equipo o despacho.</p>
+      <div class="grid grid-3">
+        <div class="card">
+          <span class="icon">🛡️</span>
+          <h3>Solvencia II</h3>
+          <p>Cálculo, revisión y validación de módulos de SCR: contraparte, operacional, tipos de interés y más.</p>
+        </div>
+        <div class="card">
+          <span class="icon">📐</span>
+          <h3>Provisiones de vida</h3>
+          <p>Cálculo y validación de provisiones matemáticas para carteras de vida bajo IFRS4 e IFRS17.</p>
+        </div>
+        <div class="card">
+          <span class="icon">🔍</span>
+          <h3>Auditoría y validación</h3>
+          <p>Revisión del cierre de ejercicio y validación de estados financieros de grupos consolidados.</p>
+        </div>
+        <div class="card">
+          <span class="icon">⚙️</span>
+          <h3>Automatización</h3>
+          <p>Scripts en Python que sustituyen procesos manuales de Excel por flujos fiables y reproducibles.</p>
+        </div>
+        <div class="card">
+          <span class="icon">📊</span>
+          <h3>Análisis de datos</h3>
+          <p>Limpieza, análisis y visualización de datos actuariales y financieros para decisiones con evidencia.</p>
+        </div>
+        <div class="card">
+          <span class="icon">📑</span>
+          <h3>Modelización y reporting</h3>
+          <p>Modelos cuantitativos e informes claros que traducen los números al lenguaje del negocio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EXPERIENCIA ===================== -->
+  <section id="experiencia" class="soft-section">
+    <div class="wrap">
+      <h2>Experiencia</h2>
+      <p class="section-sub">Dónde he trabajado y qué he hecho.</p>
+
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-date">Ene 2026 – Jul 2026</div>
+          <div class="exp-place">PwC · PricewaterhouseCoopers</div>
+        </div>
+        <div class="exp-body">
+          <h3>Auditoría Actuarial (Intern)</h3>
+          <ul>
+            <li><b>Auditoría actuarial:</b> revisión y validación del cierre de ejercicio bajo IFRS4, Solvencia II e IFRS17 para compañías cotizadas.</li>
+            <li><b>Vida:</b> cálculo de provisiones matemáticas para carteras de vida bajo IFRS4.</li>
+            <li><b>Solvencia II:</b> cálculo, revisión y validación de módulos de SCR (contraparte, operacional, tipos de interés, etc.).</li>
+            <li><b>Consolidados:</b> revisión y validación de estados financieros de grupos consolidados.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-date">Ene 2025 – Ene 2026</div>
+          <div class="exp-place">Universitat de Barcelona</div>
+        </div>
+        <div class="exp-body">
+          <h3>Colaboración · Máster de Dirección de Entidades Aseguradoras y Financieras</h3>
+          <ul>
+            <li>Apoyo en la coordinación de sesiones del máster y participación como oyente.</li>
+            <li>Proyectos de investigación aplicada bajo la supervisión de la Catedrática Dra. Mercedes Ayuso.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-date">Mar 2023 – May 2024</div>
+          <div class="exp-place">Siemens</div>
+        </div>
+        <div class="exp-body">
+          <h3>Administrador Financiero · Accounts Payable Specialist</h3>
+          <p class="exp-role">Smart Infrastructure · Digital Industries</p>
+          <ul>
+            <li>Gestión financiera de proyectos de infraestructura mediante SAP y portales de facturación.</li>
+            <li>Optimización de procesos logísticos de import/export y flujos de facturación de proveedores.</li>
+            <li>Control de cobros de carteras de deuda corporativa de varios millones mensuales.</li>
+            <li>Negociación de condiciones de pago y resolución de incidencias de morosidad.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EDUCACIÓN ===================== -->
+  <section id="educacion">
+    <div class="wrap">
+      <h2>Educación</h2>
+      <p class="section-sub">Formación académica.</p>
+      <div class="card">
+        <div class="edu-item">
+          <div>
+            <div class="edu-title">Máster en Ciencias Actuariales y Financieras</div>
+            <div class="edu-detail">Universitat de Barcelona</div>
+          </div>
+          <div class="edu-year">2024 – 2026</div>
+        </div>
+        <div class="edu-item">
+          <div>
+            <div class="edu-title">Grado en Economía · Minor en Matemáticas</div>
+            <div class="edu-detail">Universitat de Barcelona</div>
+          </div>
+          <div class="edu-year">2019 – 2024</div>
+        </div>
+        <div class="edu-item">
+          <div>
+            <div class="edu-title">Financial Markets</div>
+            <div class="edu-detail">Coursera</div>
+          </div>
+          <div class="edu-year">2023</div>
+        </div>
+      </div>
+      <p style="color:var(--text-soft); font-size:.9rem; margin-top:16px">
+        Idiomas: Castellano (nativo) · Catalán (nativo) · Inglés (B2 – EIM).
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACTO ===================== -->
+  <section id="contacto" class="soft-section contact">
+    <div class="wrap">
+      <h2>¿Hablamos?</h2>
+      <p class="section-sub">Cuéntame tu proyecto y te respondo pronto.</p>
+      <div class="cta-row" style="justify-content:center">
+        <a href="mailto:sergivergara49@gmail.com" class="btn btn-primary">✉️ sergivergara49@gmail.com</a>
+        <a href="tel:+34678974279" class="btn btn-ghost">📞 678 974 279</a>
+        <a href="https://www.linkedin.com/in/sergivergara" class="btn btn-ghost" target="_blank" rel="noopener">in LinkedIn</a>
+        <a href="https://github.com/SergiActuary" class="btn btn-ghost" target="_blank" rel="noopener">⌥ GitHub</a>
+        <a href="CV-Sergi-Lopez-Vergara.pdf" class="btn btn-ghost" download>⬇ CV (PDF)</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="wrap foot-inner">
+      <span>© <span id="year"></span> Sergi López Vergara · Barcelona</span>
+      <span>Actuario · Solvencia II · IFRS17 · Datos</span>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
