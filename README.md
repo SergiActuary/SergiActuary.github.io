@@ -8,7 +8,9 @@ publicado con **GitHub Pages** en https://sergiactuary.github.io
 
 ## Estructura
 
-- `index.html` — la página completa (estilos incluidos, tema claro/oscuro automático).
+- `index.html` — página principal (hero, servicios, proyectos, experiencia, contacto).
+- `lifeflow.html` — página propia del proyecto LifeFlow, enlazada desde la tarjeta de Proyectos.
+- `styles.css` — estilos compartidos por todas las páginas (tema claro/oscuro automático).
 - `CV-Sergi-Lopez-Vergara.pdf` — CV enlazado desde el botón de descarga.
 
 ## Editar

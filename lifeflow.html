@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LifeFlow — Librería Python para cálculo actuarial | Sergi López Vergara</title>
+  <meta name="description" content="LifeFlow: librería de Python para replicar y automatizar en código los cálculos actuariales de carteras de vida que hoy se hacen en Excel.">
+  <meta name="author" content="Sergi López Vergara">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="LifeFlow — Librería Python para cálculo actuarial">
+  <meta property="og:description" content="Del Excel al código: replica y automatiza cálculos actuariales de carteras de vida.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html" style="color:var(--text)">Sergi López<span style="color:var(--accent)">.</span></a>
+      <nav class="nav-links">
+        <a href="index.html#servicios">Servicios</a>
+        <a href="index.html#proyectos">Proyectos</a>
+        <a href="index.html#experiencia">Experiencia</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="wrap">
+      <a class="back-link" href="index.html#proyectos">← Volver a proyectos</a>
+      <span class="hero-badge">✦ Proyecto en desarrollo</span>
+      <h1><span>LifeFlow</span></h1>
+      <p class="lead">
+        Una librería de Python que lleva los cálculos actuariales de carteras de vida
+        del Excel al código: los replica con facilidad, los deja reproducibles y los
+        automatiza. Menos trabajo manual, menos errores, resultados auditables.
+      </p>
+      <div class="cta-row">
+        <!-- Cuando el repositorio esté público, activa este botón poniendo la URL real:
+             <a href="https://github.com/SergiActuary/lifeflow" class="btn btn-primary" target="_blank" rel="noopener">Ver en GitHub →</a> -->
+        <a href="index.html#contacto" class="btn btn-primary">¿Te interesa? Hablemos →</a>
+        <span class="btn btn-ghost" style="cursor:default; opacity:.75">GitHub · próximamente</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== QUÉ ES ===================== -->
+  <section id="que-es" class="soft-section">
+    <div class="wrap prose">
+      <h2>El problema que resuelve</h2>
+      <p class="section-sub">Del Excel al código, sin perder el control.</p>
+      <p>
+        En muchos equipos, el cálculo de una cartera de vida vive en una hoja de Excel:
+        potente para empezar, pero difícil de auditar, de repetir sin errores y de
+        escalar. Cada cierre implica repetir pasos manuales y confiar en fórmulas
+        enredadas que solo una persona entiende.
+      </p>
+      <p>
+        <b>LifeFlow</b> es un conjunto de funciones preparadas para trasladar ese cálculo
+        a Python de forma directa. Tomas lo que hace el Excel sobre la cartera y lo
+        replicas en código; a partir de ahí, el proceso queda automatizado, versionado y
+        listo para ejecutarse las veces que haga falta con total trazabilidad.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== CARACTERÍSTICAS ===================== -->
+  <section id="caracteristicas">
+    <div class="wrap">
+      <h2>Qué aporta</h2>
+      <p class="section-sub">Ideas principales del proyecto.</p>
+      <div class="grid grid-2">
+        <div class="card feature">
+          <span class="f-icon">📊➡️🐍</span>
+          <div>
+            <h3>Del Excel al código</h3>
+            <p>Replica en Python los cálculos que hoy están en la hoja de cálculo, con una API pensada para el flujo actuarial.</p>
+          </div>
+        </div>
+        <div class="card feature">
+          <span class="f-icon">⚙️</span>
+          <div>
+            <h3>Automatización</h3>
+            <p>Una vez trasladado, el cálculo se ejecuta solo: sin pasos manuales repetitivos en cada cierre.</p>
+          </div>
+        </div>
+        <div class="card feature">
+          <span class="f-icon">🔁</span>
+          <div>
+            <h3>Reproducible y auditable</h3>
+            <p>Mismos datos, mismo resultado. Todo queda versionado y es fácil de revisar y validar.</p>
+          </div>
+        </div>
+        <div class="card feature">
+          <span class="f-icon">🧩</span>
+          <div>
+            <h3>Funciones reutilizables</h3>
+            <p>Bloques preparados para los pasos comunes del cálculo, para no reinventar la rueda en cada cartera.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EJEMPLO ===================== -->
+  <section id="ejemplo" class="soft-section">
+    <div class="wrap prose">
+      <h2>Idea de uso</h2>
+      <p class="section-sub">Ejemplo ilustrativo — la API final puede cambiar.</p>
+      <div class="codeblock"><pre><code><span class="code-comment"># Cargar la cartera desde el mismo Excel de siempre</span>
+import lifeflow as lf
+
+cartera = lf.leer_cartera("cartera_vida.xlsx")
+
+<span class="code-comment"># Replicar el cálculo que antes hacía la hoja de cálculo</span>
+resultado = lf.calcular_provisiones(cartera, base="IFRS4")
+
+<span class="code-comment"># Automatizado y reproducible: exportar el resultado</span>
+resultado.exportar("provisiones_2026.xlsx")</code></pre></div>
+      <p style="font-size:.9rem">
+        * Fragmento orientativo para mostrar el enfoque. La documentación completa vivirá
+        en el repositorio de LifeFlow cuando esté publicado.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== ESTADO ===================== -->
+  <section id="estado">
+    <div class="wrap prose">
+      <h2>Estado del proyecto</h2>
+      <p class="section-sub">En desarrollo activo.</p>
+      <ul class="roadmap">
+        <li><span class="r-state">🚧</span> <span>Diseño del núcleo de funciones de cálculo.</span></li>
+        <li><span class="r-state">🚧</span> <span>Lectura y validación de carteras desde Excel.</span></li>
+        <li><span class="r-state">🗓️</span> <span>Documentación y publicación del repositorio en GitHub.</span></li>
+        <li><span class="r-state">🗓️</span> <span>Ejemplos reproducibles y guía de uso.</span></li>
+      </ul>
+      <p style="margin-top:24px">
+        ¿Trabajas con carteras de vida y este enfoque te encaja?
+        <a href="index.html#contacto">Escríbeme</a> y lo comentamos.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="wrap foot-inner">
+      <span>© <span id="year"></span> Sergi López Vergara · Barcelona</span>
+      <span><a href="index.html">← Volver a la web</a></span>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
