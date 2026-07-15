@@ -136,6 +136,22 @@
     }
     .exp-body li b { color: var(--text); font-weight: 600; }
 
+    /* ===================== PROYECTOS ===================== */
+    .proj-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+    .proj-head h3 { font-size: 1.15rem; }
+    .proj-tag { font-size: .78rem; color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 6px; }
+    .badge-wip {
+      font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .03em;
+      color: #b46b00; background: #fff4e0; border: 1px solid #ffd591;
+      padding: 2px 9px; border-radius: 999px;
+    }
+    @media (prefers-color-scheme: dark) {
+      .badge-wip { color: #f0b866; background: #2c2312; border-color: #4a3a1a; }
+    }
+    .proj-tech { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .proj-link { display: inline-block; margin-top: 16px; font-weight: 600; font-size: .95rem; }
+    .proj-link.disabled { color: var(--text-soft); font-weight: 500; }
+
     /* ===================== EDUCACIÓN ===================== */
     .edu-item { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; }
     .edu-item + .edu-item { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border); }
@@ -162,6 +178,7 @@
       <nav class="nav-links">
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#servicios">Servicios</a>
+        <a href="#proyectos">Proyectos</a>
         <a href="#experiencia">Experiencia</a>
         <a href="#contacto">Contacto</a>
       </nav>
@@ -265,8 +282,40 @@
     </div>
   </section>
 
+  <!-- ===================== PROYECTOS ===================== -->
+  <section id="proyectos" class="soft-section">
+    <div class="wrap">
+      <h2>Proyectos</h2>
+      <p class="section-sub">Herramientas propias que estoy construyendo.</p>
+      <div class="grid grid-2">
+        <div class="card">
+          <div class="proj-tag">Python · Actuarial</div>
+          <div class="proj-head">
+            <h3>LifeFlow</h3>
+            <span class="badge-wip">En desarrollo</span>
+          </div>
+          <p>
+            Librería de Python para replicar en código los cálculos actuariales que hoy
+            se hacen en Excel sobre una cartera. Un conjunto de funciones que traducen la
+            hoja de cálculo a un flujo reproducible y automatizado, reduciendo el trabajo
+            manual y los errores.
+          </p>
+          <div class="proj-tech">
+            <span class="chip">Python</span>
+            <span class="chip">Pandas</span>
+            <span class="chip">Automatización</span>
+            <span class="chip">Carteras de vida</span>
+          </div>
+          <!-- Cuando el repo esté público, sustituir por el enlace real:
+               <a class="proj-link" href="https://github.com/SergiActuary/lifeflow" target="_blank" rel="noopener">Ver en GitHub →</a> -->
+          <span class="proj-link disabled">Repositorio y documentación · próximamente</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===================== EXPERIENCIA ===================== -->
-  <section id="experiencia" class="soft-section">
+  <section id="experiencia">
     <div class="wrap">
       <h2>Experiencia</h2>
       <p class="section-sub">Dónde he trabajado y qué he hecho.</p>
