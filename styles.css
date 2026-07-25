@@ -156,3 +156,29 @@ footer { border-top: 1px solid var(--border); padding: 30px 0; color: var(--text
   font-size: .9rem; line-height: 1.7; color: var(--text); white-space: pre;
 }
 .code-comment { color: var(--text-soft); }
+.code-out { color: var(--text-soft); }
+.code-label {
+  font-size: .78rem; font-weight: 700; color: var(--accent);
+  text-transform: uppercase; letter-spacing: .05em; margin: 26px 0 8px;
+}
+.code-label:first-of-type { margin-top: 4px; }
+
+/* Badge (proyecto en desarrollo) */
+.badge {
+  display: inline-block; font-size: .82rem; font-weight: 600;
+  color: var(--accent); background: var(--accent-soft);
+  padding: 5px 13px; border-radius: 999px; margin-bottom: 18px;
+}
+
+/* Features grid */
+.feature-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 4px; }
+@media (max-width: 640px) { .feature-grid { grid-template-columns: 1fr; } }
+.card.feature { display: flex; gap: 14px; align-items: flex-start; padding: 20px; }
+.feature .f-icon { font-size: 1.5rem; line-height: 1; flex-shrink: 0; }
+.feature h3 { font-size: 1.02rem; margin-bottom: 4px; }
+.feature p { color: var(--text-soft); font-size: .93rem; }
+
+/* Roadmap / estado */
+.roadmap { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.roadmap li { display: flex; gap: 12px; align-items: baseline; color: var(--text-soft); }
+.roadmap li .r-state { font-size: .95rem; flex-shrink: 0; }

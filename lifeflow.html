@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LifeFlow — Librería Python para cálculo actuarial | Sergi López Vergara</title>
-  <meta name="description" content="LifeFlow: librería de Python para replicar y automatizar en código los cálculos actuariales de carteras de vida que hoy se hacen en Excel.">
+  <title>LifeFlow — Python library for life actuarial calculations</title>
+  <meta name="description" content="LifeFlow: a Python library that takes life insurance actuarial calculations from Excel to reproducible, auditable code — mortality tables, present values and reserves.">
   <meta name="author" content="Sergi López Vergara">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="LifeFlow — Librería Python para cálculo actuarial">
-  <meta property="og:description" content="Del Excel al código: replica y automatiza cálculos actuariales de carteras de vida.">
+  <meta property="og:title" content="LifeFlow — Python library for life actuarial calculations">
+  <meta property="og:description" content="From Excel to code: reproduce and automate actuarial calculations for life portfolios.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,139 +16,183 @@
   <!-- ===================== NAV ===================== -->
   <header class="nav">
     <div class="wrap nav-inner">
-      <a class="brand" href="index.html" style="color:var(--text)">Sergi López<span style="color:var(--accent)">.</span></a>
+      <a class="brand" href="#top" style="color:var(--text)">LifeFlow<span style="color:var(--accent)">.</span></a>
       <nav class="nav-links">
-        <a href="index.html#servicios">Servicios</a>
-        <a href="index.html#proyectos">Proyectos</a>
-        <a href="index.html#experiencia">Experiencia</a>
-        <a href="index.html#contacto">Contacto</a>
+        <a href="#why">Overview</a>
+        <a href="#features">Features</a>
+        <a href="#examples">Examples</a>
+        <a href="#status">Status</a>
+        <a href="#author">Author</a>
       </nav>
     </div>
   </header>
 
   <!-- ===================== HERO ===================== -->
-  <section class="hero">
+  <section id="top" class="hero">
     <div class="wrap">
-      <a class="back-link" href="index.html#proyectos">← Volver a proyectos</a>
-      <span class="hero-badge">✦ Proyecto en desarrollo</span>
+      <span class="badge">✦ Work in progress</span>
       <h1><span>LifeFlow</span></h1>
       <p class="lead">
-        Una librería de Python que lleva los cálculos actuariales de carteras de vida
-        del Excel al código: los replica con facilidad, los deja reproducibles y los
-        automatiza. Menos trabajo manual, menos errores, resultados auditables.
+        A Python library that brings life insurance actuarial calculations from Excel
+        into code: easy to reproduce, fully auditable and ready to run on their own.
+        Less manual work, fewer errors, results you can trust.
       </p>
       <div class="cta-row">
-        <!-- Cuando el repositorio esté público, activa este botón poniendo la URL real:
-             <a href="https://github.com/SergiActuary/lifeflow" class="btn btn-primary" target="_blank" rel="noopener">Ver en GitHub →</a> -->
-        <a href="index.html#contacto" class="btn btn-primary">¿Te interesa? Hablemos →</a>
-        <span class="btn btn-ghost" style="cursor:default; opacity:.75">GitHub · próximamente</span>
+        <!-- When the repo is public, enable this button with the real URL:
+             <a href="https://github.com/SergiActuary/lifeflow" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub →</a> -->
+        <a href="#examples" class="btn btn-primary">See the examples →</a>
+        <span class="btn btn-ghost" style="cursor:default; opacity:.75">GitHub · coming soon</span>
       </div>
     </div>
   </section>
 
-  <!-- ===================== QUÉ ES ===================== -->
-  <section id="que-es" class="soft-section">
+  <!-- ===================== WHY ===================== -->
+  <section id="why" class="soft-section">
     <div class="wrap prose">
-      <h2>El problema que resuelve</h2>
-      <p class="section-sub">Del Excel al código, sin perder el control.</p>
+      <h2>The problem it solves</h2>
+      <p class="section-sub">From Excel to code, without losing control.</p>
       <p>
-        En muchos equipos, el cálculo de una cartera de vida vive en una hoja de Excel:
-        potente para empezar, pero difícil de auditar, de repetir sin errores y de
-        escalar. Cada cierre implica repetir pasos manuales y confiar en fórmulas
-        enredadas que solo una persona entiende.
+        In many teams, the valuation of a life portfolio lives inside a spreadsheet:
+        powerful to get started, but hard to audit, hard to repeat without mistakes and
+        hard to scale. Every closing means repeating manual steps and trusting tangled
+        formulas that only one person really understands.
       </p>
       <p>
-        <b>LifeFlow</b> es un conjunto de funciones preparadas para trasladar ese cálculo
-        a Python de forma directa. Tomas lo que hace el Excel sobre la cartera y lo
-        replicas en código; a partir de ahí, el proceso queda automatizado, versionado y
-        listo para ejecutarse las veces que haga falta con total trazabilidad.
+        <b>LifeFlow</b> is a set of functions designed to move that calculation into
+        Python in a direct way. You take what the spreadsheet does over the portfolio and
+        reproduce it in code; from there the process becomes automated, versioned and
+        ready to run as many times as needed, with full traceability.
       </p>
     </div>
   </section>
 
-  <!-- ===================== CARACTERÍSTICAS ===================== -->
-  <section id="caracteristicas">
+  <!-- ===================== FEATURES ===================== -->
+  <section id="features">
     <div class="wrap">
-      <h2>Qué aporta</h2>
-      <p class="section-sub">Ideas principales del proyecto.</p>
-      <div class="grid grid-2">
+      <h2>What it gives you</h2>
+      <p class="section-sub">The core ideas behind the project.</p>
+      <div class="feature-grid">
         <div class="card feature">
           <span class="f-icon">📊➡️🐍</span>
           <div>
-            <h3>Del Excel al código</h3>
-            <p>Replica en Python los cálculos que hoy están en la hoja de cálculo, con una API pensada para el flujo actuarial.</p>
+            <h3>From spreadsheet to code</h3>
+            <p>Reproduce in Python the calculations that live in the spreadsheet today, with an API built around the actuarial workflow.</p>
           </div>
         </div>
         <div class="card feature">
           <span class="f-icon">⚙️</span>
           <div>
-            <h3>Automatización</h3>
-            <p>Una vez trasladado, el cálculo se ejecuta solo: sin pasos manuales repetitivos en cada cierre.</p>
+            <h3>Automation</h3>
+            <p>Once translated, the calculation runs by itself — no repetitive manual steps at every closing.</p>
           </div>
         </div>
         <div class="card feature">
           <span class="f-icon">🔁</span>
           <div>
-            <h3>Reproducible y auditable</h3>
-            <p>Mismos datos, mismo resultado. Todo queda versionado y es fácil de revisar y validar.</p>
+            <h3>Reproducible &amp; auditable</h3>
+            <p>Same inputs, same output. Everything is versioned and easy to review and validate.</p>
           </div>
         </div>
         <div class="card feature">
           <span class="f-icon">🧩</span>
           <div>
-            <h3>Funciones reutilizables</h3>
-            <p>Bloques preparados para los pasos comunes del cálculo, para no reinventar la rueda en cada cartera.</p>
+            <h3>Reusable building blocks</h3>
+            <p>Ready-made functions for the common steps of the calculation, so you don't reinvent the wheel for each portfolio.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== EJEMPLO ===================== -->
-  <section id="ejemplo" class="soft-section">
+  <!-- ===================== EXAMPLES ===================== -->
+  <section id="examples" class="soft-section">
     <div class="wrap prose">
-      <h2>Idea de uso</h2>
-      <p class="section-sub">Ejemplo ilustrativo — la API final puede cambiar.</p>
-      <div class="codeblock"><pre><code><span class="code-comment"># Cargar la cartera desde el mismo Excel de siempre</span>
-import lifeflow as lf
+      <h2>Practical examples</h2>
+      <p class="section-sub">Illustrative snippets — the final API may still change.</p>
 
-cartera = lf.leer_cartera("cartera_vida.xlsx")
+      <p class="code-label">1 · Quick start</p>
+      <div class="codeblock"><pre><code>import lifeflow as lf
 
-<span class="code-comment"># Replicar el cálculo que antes hacía la hoja de cálculo</span>
-resultado = lf.calcular_provisiones(cartera, base="IFRS4")
+<span class="code-comment"># Load a standard mortality table and a policy portfolio</span>
+table     = lf.MortalityTable.load("PERM_2020")
+portfolio = lf.read_portfolio("life_portfolio.xlsx")
 
-<span class="code-comment"># Automatizado y reproducible: exportar el resultado</span>
-resultado.exportar("provisiones_2026.xlsx")</code></pre></div>
+<span class="code-comment"># Value the whole book under IFRS 4 and export the result</span>
+reserves = lf.reserves(portfolio, table, basis="IFRS4", interest=0.02)
+reserves.to_excel("reserves_2026.xlsx")</code></pre></div>
+
+      <p class="code-label">2 · Survival &amp; death probabilities</p>
+      <div class="codeblock"><pre><code><span class="code-comment"># Straight from the mortality table</span>
+table.p(x=45, t=10)          <span class="code-comment"># 10-year survival probability, age 45  →</span> <span class="code-out">0.9721</span>
+table.q(x=45)                <span class="code-comment"># 1-year death probability (mortality rate)  →</span> <span class="code-out">0.00187</span>
+table.life_expectancy(x=65)  <span class="code-comment"># curtate life expectancy e_x  →</span> <span class="code-out">21.4</span></code></pre></div>
+
+      <p class="code-label">3 · Actuarial present values</p>
+      <div class="codeblock"><pre><code><span class="code-comment"># Price a whole-life annuity-due and a 20-year term insurance</span>
+annuity = lf.annuity_due(age=65, table=table, interest=0.02)      <span class="code-comment"># ä_x</span>
+term    = lf.term_insurance(age=40, n=20, table=table, i=0.02)    <span class="code-comment"># A¹_(x:n)</span>
+
+print(f"Annuity factor  a-due(65) = {annuity:.4f}")   <span class="code-comment">#</span> <span class="code-out">16.3820</span>
+print(f"Term insurance  A(40:20)  = {term:.5f}")       <span class="code-comment">#</span> <span class="code-out">0.03145</span></code></pre></div>
+
+      <p class="code-label">4 · Reserve projection (the "flow")</p>
+      <div class="codeblock"><pre><code><span class="code-comment"># Project mathematical reserves year by year for one policy</span>
+policy   = portfolio.get("POL-00042")
+schedule = lf.project_reserves(policy, table, years=range(2026, 2031))
+
+print(schedule)
+<span class="code-out">#   year    reserve   premium   benefit_outgo
+#   2026    1240.55    480.00      0.00
+#   2027    1690.12    480.00      0.00
+#   2028    2151.40    480.00      0.00
+#   2029    2624.88    480.00      0.00
+#   2030    3110.97    480.00      0.00</span></code></pre></div>
+
       <p style="font-size:.9rem">
-        * Fragmento orientativo para mostrar el enfoque. La documentación completa vivirá
-        en el repositorio de LifeFlow cuando esté publicado.
+        * Snippets are indicative and meant to show the approach. Full documentation will
+        live in the LifeFlow repository once it is published.
       </p>
     </div>
   </section>
 
-  <!-- ===================== ESTADO ===================== -->
-  <section id="estado">
+  <!-- ===================== STATUS ===================== -->
+  <section id="status">
     <div class="wrap prose">
-      <h2>Estado del proyecto</h2>
-      <p class="section-sub">En desarrollo activo.</p>
+      <h2>Project status</h2>
+      <p class="section-sub">Under active development.</p>
       <ul class="roadmap">
-        <li><span class="r-state">🚧</span> <span>Diseño del núcleo de funciones de cálculo.</span></li>
-        <li><span class="r-state">🚧</span> <span>Lectura y validación de carteras desde Excel.</span></li>
-        <li><span class="r-state">🗓️</span> <span>Documentación y publicación del repositorio en GitHub.</span></li>
-        <li><span class="r-state">🗓️</span> <span>Ejemplos reproducibles y guía de uso.</span></li>
+        <li><span class="r-state">🚧</span> <span>Designing the core calculation functions.</span></li>
+        <li><span class="r-state">🚧</span> <span>Reading and validating portfolios from Excel.</span></li>
+        <li><span class="r-state">🗓️</span> <span>Documentation and public release on GitHub.</span></li>
+        <li><span class="r-state">🗓️</span> <span>Reproducible examples and a usage guide.</span></li>
       </ul>
-      <p style="margin-top:24px">
-        ¿Trabajas con carteras de vida y este enfoque te encaja?
-        <a href="index.html#contacto">Escríbeme</a> y lo comentamos.
+    </div>
+  </section>
+
+  <!-- ===================== AUTHOR ===================== -->
+  <section id="author" class="soft-section">
+    <div class="wrap prose">
+      <h2>Author</h2>
+      <p class="section-sub">Who is building LifeFlow.</p>
+      <p>
+        LifeFlow is designed and built by <b>Sergi López Vergara</b>, an actuary from
+        Barcelona working where life insurance, risk and data meet — with a soft spot for
+        automating in Python what used to be done by hand.
       </p>
+      <div class="cta-row" style="margin-top:20px">
+        <a href="index.html" class="btn btn-primary">Personal site →</a>
+        <a href="https://www.linkedin.com/in/sergivergara" class="btn btn-ghost" target="_blank" rel="noopener">in LinkedIn</a>
+        <a href="https://github.com/SergiActuary" class="btn btn-ghost" target="_blank" rel="noopener">⌥ GitHub</a>
+        <a href="mailto:sergivergara49@gmail.com" class="btn btn-ghost">✉️ Email</a>
+      </div>
     </div>
   </section>
 
   <!-- ===================== FOOTER ===================== -->
   <footer>
     <div class="wrap foot-inner">
-      <span>© <span id="year"></span> Sergi López Vergara · Barcelona</span>
-      <span><a href="index.html">← Volver a la web</a></span>
+      <span>LifeFlow · © <span id="year"></span> Sergi López Vergara · Barcelona</span>
+      <span><a href="index.html">Personal site →</a></span>
     </div>
   </footer>
 
