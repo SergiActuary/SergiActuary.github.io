@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sergiactuary.github.io/sitemap.xml
