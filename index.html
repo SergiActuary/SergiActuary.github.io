@@ -51,7 +51,7 @@
   <section class="hero">
     <div class="wrap hero-inner">
       <div class="hero-text">
-        <div class="hero-hi">Hola 👋</div>
+        <div class="hero-hi">// actuario + python · barcelona</div>
         <h1>Soy Sergi.<br>Encantado de <span>conocerte</span>.</h1>
         <!-- TODO Sergi: cambia esta frase por cómo te presentarías tú -->
         <p class="lead">
@@ -64,9 +64,35 @@
           <a href="CV-Sergi-Lopez-Vergara.pdf" class="btn btn-ghost" download>⬇ Descargar CV (PDF)</a>
         </div>
       </div>
-      <!-- Para poner tu foto: guarda un foto.jpg en esta carpeta y cambia el div de abajo por:
-           <img src="foto.jpg" alt="Sergi López Vergara" class="hero-photo"> -->
-      <div class="hero-photo placeholder">🙂</div>
+      <!-- Elemento decorativo (curva de supervivencia). Cuando quieras poner tu foto,
+           puedes sustituir todo este div .hero-visual por:
+           <img src="foto.jpg" alt="Sergi López Vergara" class="hero-visual"> -->
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hv-head">
+          <span class="hv-dot"></span><span class="hv-dot"></span><span class="hv-dot"></span>
+          <span class="hv-title">survival.py</span>
+        </div>
+        <svg class="hv-svg" viewBox="0 0 340 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Curva de supervivencia">
+          <g stroke="var(--border)" stroke-width="1">
+            <line x1="110" y1="30" x2="110" y2="172" opacity=".55"/>
+            <line x1="180" y1="30" x2="180" y2="172" opacity=".55"/>
+            <line x1="250" y1="30" x2="250" y2="172" opacity=".55"/>
+            <line x1="40" y1="72" x2="320" y2="72" opacity=".55"/>
+            <line x1="40" y1="122" x2="320" y2="122" opacity=".55"/>
+            <line x1="40" y1="30" x2="40" y2="172"/>
+            <line x1="40" y1="172" x2="320" y2="172"/>
+          </g>
+          <path d="M40,40 C110,44 150,56 190,82 C230,108 270,150 312,168 L312,172 L40,172 Z" fill="var(--accent)" fill-opacity="0.10"/>
+          <path d="M40,40 C110,44 150,56 190,82 C230,108 270,150 312,168" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="40" cy="40" r="4" fill="var(--accent)"/>
+          <circle cx="190" cy="82" r="4" fill="var(--accent)"/>
+          <circle cx="312" cy="168" r="4" fill="var(--accent)"/>
+          <text x="32" y="44" text-anchor="end" font-size="10" fill="var(--text-soft)">1.0</text>
+          <text x="32" y="174" text-anchor="end" font-size="10" fill="var(--text-soft)">0</text>
+          <text x="318" y="190" text-anchor="end" font-size="10" fill="var(--text-soft)">t</text>
+        </svg>
+        <div class="hv-foot">lₓ · probabilidad de supervivencia</div>
+      </div>
     </div>
   </section>
 
@@ -162,7 +188,7 @@
       <h2>¿Hablamos?</h2>
       <p class="section-sub">Me encantará que me escribas.</p>
       <div class="cta-row">
-        <a href="mailto:sergivergara49@gmail.com" class="btn btn-primary">✉️ sergivergara49@gmail.com</a>
+        <a href="mailto:sergiactuary@proton.me" class="btn btn-primary">✉️ sergiactuary@proton.me</a>
         <a href="https://www.linkedin.com/in/sergivergara" class="btn btn-ghost" target="_blank" rel="noopener">in LinkedIn</a>
         <a href="https://github.com/SergiActuary" class="btn btn-ghost" target="_blank" rel="noopener">⌥ GitHub</a>
         <a href="CV-Sergi-Lopez-Vergara.pdf" class="btn btn-ghost" download>⬇ CV (PDF)</a>
