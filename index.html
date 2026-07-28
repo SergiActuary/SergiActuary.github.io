@@ -40,7 +40,7 @@
       <div class="brand">Sergi<span style="color:var(--accent)">.</span></div>
       <nav class="nav-links">
         <a href="#sobre-mi">Sobre mí</a>
-        <a href="#me-gusta">Lo que me gusta</a>
+        <a href="#proyectos">Proyectos</a>
         <a href="#hago">A qué me dedico</a>
         <a href="#contacto">Contacto</a>
       </nav>
@@ -117,43 +117,26 @@
     </div>
   </section>
 
-  <!-- ===================== LO QUE ME GUSTA ===================== -->
-  <section id="me-gusta">
+  <!-- ===================== PROYECTOS ===================== -->
+  <section id="proyectos">
     <div class="wrap">
-      <h2>Lo que me gusta</h2>
-      <p class="section-sub">Las cosas que me llenan el tiempo libre.</p>
-      <!-- TODO Sergi: EJEMPLOS. Dime tus aficiones reales y cambio emojis y textos. -->
-      <div class="likes-grid">
-        <div class="like">
-          <span class="emoji">💻</span>
-          <h3>Programar</h3>
-          <p>Construir herramientas propias y darle vueltas a cómo hacer las cosas mejor.</p>
-        </div>
-        <div class="like">
-          <span class="emoji">📚</span>
-          <h3>Leer</h3>
-          <p>[Cámbialo] Sobre lo que te apasione leer: ensayo, novela, divulgación…</p>
-        </div>
-        <div class="like">
-          <span class="emoji">🎧</span>
-          <h3>Música</h3>
-          <p>[Cámbialo] Qué escuchas, si tocas algo, conciertos…</p>
-        </div>
-        <div class="like">
-          <span class="emoji">🥾</span>
-          <h3>Naturaleza</h3>
-          <p>[Cámbialo] Montaña, senderismo, viajar, salir a moverte…</p>
-        </div>
-        <div class="like">
-          <span class="emoji">♟️</span>
-          <h3>Otra afición</h3>
-          <p>[Cámbialo] Ajedrez, deporte, cocina, fotografía… lo que sea tuyo.</p>
-        </div>
-        <div class="like">
-          <span class="emoji">✦</span>
-          <h3>Y más</h3>
-          <p>[Cámbialo] Añade o quita tarjetas según lo que quieras contar.</p>
-        </div>
+      <h2>Proyectos</h2>
+      <p class="section-sub">Cosas que construyo por mi cuenta.</p>
+      <div class="proj-grid">
+        <a class="proj-card" href="https://sergiactuary.github.io/lifeflow/" target="_blank" rel="noopener">
+          <div class="proj-tag">Python · Actuarial · Open source</div>
+          <h3>LifeFlow</h3>
+          <p>
+            Librería de Python para los cálculos actuariales de carteras de vida: proyecta
+            los <strong>cash-flows</strong> y calcula el <strong>BEL</strong> (Best Estimate
+            Liability) de forma vectorizada sobre NumPy, Numba y Polars. Lleva al código
+            —reproducible y auditable— lo que tradicionalmente se hacía en Excel.
+          </p>
+          <div class="chips" style="margin-top:14px">
+            <span class="chip">pip install lifeflow</span>
+          </div>
+          <span class="proj-link">Ver el proyecto →</span>
+        </a>
       </div>
     </div>
   </section>

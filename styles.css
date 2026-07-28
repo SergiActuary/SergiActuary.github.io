@@ -134,27 +134,24 @@ header.nav {
 .about-text p { color: var(--text-soft); }
 .about-text p + p { margin-top: 14px; }
 
-/* ===================== LO QUE ME GUSTA ===================== */
-.likes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-@media (max-width: 760px) { .likes-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 460px) { .likes-grid { grid-template-columns: 1fr; } }
-.like {
+/* ===================== PROYECTOS ===================== */
+.proj-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+.proj-card {
+  display: block; color: inherit;
   background: var(--card); border: 1px solid var(--border);
-  border-radius: var(--radius); padding: 22px;
+  border-radius: var(--radius); padding: 24px;
   transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
 }
-.like:hover {
-  transform: translateY(-3px);
+.proj-card:hover {
+  text-decoration: none; transform: translateY(-3px);
   box-shadow: var(--shadow);
   border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
 }
-.like .emoji {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 44px; height: 44px; border-radius: 10px;
-  background: var(--accent-soft); font-size: 1.4rem; margin-bottom: 14px;
-}
-.like h3 { font-size: 1.02rem; margin-bottom: 5px; }
-.like p { color: var(--text-soft); font-size: .93rem; }
+.proj-tag { font-family: var(--mono); font-size: .75rem; color: var(--accent); letter-spacing: .02em; margin-bottom: 10px; }
+.proj-card h3 { font-size: 1.2rem; margin-bottom: 8px; }
+.proj-card p { color: var(--text-soft); font-size: .93rem; }
+.proj-card p strong { color: var(--text); font-weight: 600; }
+.proj-link { display: inline-block; margin-top: 14px; color: var(--accent); font-weight: 600; font-size: .9rem; }
 
 /* ===================== A QUÉ ME DEDICO ===================== */
 .work-note { max-width: 680px; }
