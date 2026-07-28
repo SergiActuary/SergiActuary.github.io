@@ -118,6 +118,11 @@ header.nav {
 .about-text p { color: var(--text-soft); }
 .about-text p + p { margin-top: 14px; }
 
+/* Cabeceras centradas en Sobre mí y Proyectos */
+#sobre-mi h2, #sobre-mi .section-sub,
+#proyectos h2, #proyectos .section-sub { text-align: center; }
+#sobre-mi .about-text { margin-inline: auto; }
+
 /* ===================== PROYECTOS ===================== */
 .proj-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
 .proj-card {
