@@ -137,10 +137,7 @@ header.nav {
 .proj-card p strong { color: var(--text); font-weight: 600; }
 .proj-link { display: inline-block; margin-top: 14px; color: var(--accent); font-weight: 600; font-size: .9rem; }
 
-/* ===================== A QUÉ ME DEDICO ===================== */
-.work-note { max-width: 680px; }
-.work-note p { color: var(--text-soft); }
-.work-note p + p { margin-top: 14px; }
+/* ===================== CHIPS ===================== */
 .chips { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 20px; }
 .chip {
   font-family: var(--mono); font-size: .8rem; letter-spacing: -.01em;
