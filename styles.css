@@ -56,9 +56,14 @@ header.nav {
 }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 62px; }
 .brand { font-family: var(--mono); font-weight: 600; font-size: 1rem; letter-spacing: -.02em; color: var(--text); }
+.nav-right { display: flex; align-items: center; gap: 22px; }
 .nav-links { display: flex; gap: 26px; }
 .nav-links a { color: var(--text-soft); font-size: .92rem; }
 .nav-links a:hover { color: var(--accent); text-decoration: none; }
+.nav-social { display: flex; align-items: center; gap: 14px; }
+.nav-icon { display: inline-flex; color: var(--text-soft); transition: color .15s ease, transform .12s ease; }
+.nav-icon:hover { color: var(--accent); transform: translateY(-1px); text-decoration: none; }
+.nav-icon svg { width: 20px; height: 20px; fill: currentColor; }
 @media (max-width: 680px) { .nav-links { display: none; } }
 
 /* ===================== HERO ===================== */
