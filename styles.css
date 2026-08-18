@@ -160,3 +160,9 @@ header.nav {
 footer { border-top: 1px solid var(--border); padding: 30px 0; color: var(--text-soft); }
 .foot-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
 .foot-inner span { font-family: var(--mono); font-size: .8rem; }
+
+/* ===================== ANIMACIONES ===================== */
+@media (prefers-reduced-motion: no-preference) {
+  html.js .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+  html.js .reveal.in-view { opacity: 1; transform: none; }
+}
