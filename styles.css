@@ -6,14 +6,15 @@
   --text: #0f1729;
   --text-soft: #5a6782;
   --border: #e2e8f2;
-  --accent: #3a5bd9;
-  --accent-soft: #e9edfc;
+  --accent: #0e7c74;
+  --accent-soft: #e1f0ee;
   --grid-line: rgba(15, 23, 41, .05);
   --shadow: 0 1px 2px rgba(15,23,41,.04), 0 14px 34px rgba(15,23,41,.07);
   --radius: 12px;
   --maxw: 1080px;
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --mono: ui-monospace, "SF Mono", "JetBrains Mono", "Cascadia Code", Menlo, Consolas, monospace;
+  --display: "Space Grotesk", var(--sans);
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -23,8 +24,8 @@
     --text: #e7ecf6;
     --text-soft: #8b98b4;
     --border: #1e2942;
-    --accent: #6d8bff;
-    --accent-soft: #16203c;
+    --accent: #3fbdb0;
+    --accent-soft: #122a27;
     --grid-line: rgba(255, 255, 255, .05);
     --shadow: 0 1px 2px rgba(0,0,0,.3), 0 14px 34px rgba(0,0,0,.45);
   }
@@ -43,7 +44,7 @@ a:hover { text-decoration: underline; }
 ::selection { background: color-mix(in srgb, var(--accent) 25%, transparent); }
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 section { padding: 74px 0; }
-h1, h2, h3 { font-family: var(--sans); font-weight: 700; letter-spacing: -.02em; }
+h1, h2, h3 { font-family: var(--display); font-weight: 600; letter-spacing: -.02em; }
 h2 { font-size: 1.7rem; margin-bottom: 8px; }
 .section-sub { color: var(--text-soft); margin-bottom: 34px; }
 
@@ -108,11 +109,12 @@ header.nav {
   border-radius: 14px; box-shadow: var(--shadow); overflow: hidden;
 }
 .hv-head {
-  display: flex; align-items: center; gap: 7px;
+  display: flex; align-items: center; gap: 9px;
   padding: 11px 14px; border-bottom: 1px solid var(--border); background: var(--bg-soft);
 }
-.hv-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--border); }
-.hv-title { margin-left: 8px; font-family: var(--mono); font-size: .78rem; color: var(--text-soft); }
+.hv-tick { width: 9px; height: 9px; border-radius: 2px; background: var(--accent); flex-shrink: 0; }
+.hv-title { font-family: var(--mono); font-size: .78rem; color: var(--text); letter-spacing: .01em; }
+.hv-cols { margin-left: auto; font-family: var(--mono); font-size: .72rem; color: var(--text-soft); letter-spacing: .05em; }
 .hv-svg { display: block; width: 100%; height: auto; padding: 16px 12px 2px; }
 .hv-svg text { font-family: var(--mono); }
 .hv-foot { padding: 4px 14px 14px; font-family: var(--mono); font-size: .74rem; color: var(--text-soft); }
