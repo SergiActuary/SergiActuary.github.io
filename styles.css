@@ -102,22 +102,24 @@ header.nav {
 .btn-ghost { background: var(--card); color: var(--text); }
 .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
 
-/* Visual "tech" del hero (ventana con curva de supervivencia) */
-.hero-visual {
+/* Tarjeta de GitHub en el hero */
+.gh-card {
   flex-shrink: 0; width: 340px; max-width: 100%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; gap: 4px; padding: 44px 28px;
   background: var(--card); border: 1px solid var(--border);
-  border-radius: 14px; box-shadow: var(--shadow); overflow: hidden;
+  border-radius: 14px; box-shadow: var(--shadow); color: inherit;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
 }
-.hv-head {
-  display: flex; align-items: center; gap: 9px;
-  padding: 11px 14px; border-bottom: 1px solid var(--border); background: var(--bg-soft);
+.gh-card:hover {
+  text-decoration: none; transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
 }
-.hv-tick { width: 9px; height: 9px; border-radius: 2px; background: var(--accent); flex-shrink: 0; }
-.hv-title { font-family: var(--mono); font-size: .78rem; color: var(--text); letter-spacing: .01em; }
-.hv-cols { margin-left: auto; font-family: var(--mono); font-size: .72rem; color: var(--text-soft); letter-spacing: .05em; }
-.hv-svg { display: block; width: 100%; height: auto; padding: 16px 12px 2px; }
-.hv-svg text { font-family: var(--mono); }
-.hv-foot { padding: 4px 14px 14px; font-family: var(--mono); font-size: .74rem; color: var(--text-soft); }
+.gh-logo { width: 58px; height: 58px; fill: var(--text); margin-bottom: 12px; transition: fill .15s ease; }
+.gh-card:hover .gh-logo { fill: var(--accent); }
+.gh-handle { font-family: var(--mono); font-size: 1.05rem; font-weight: 600; color: var(--text); }
+.gh-sub { color: var(--text-soft); font-size: .9rem; }
+.gh-cta { margin-top: 14px; color: var(--accent); font-weight: 600; font-size: .9rem; }
 
 /* ===================== SECCIONES ===================== */
 .soft-section { background: var(--bg-soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
