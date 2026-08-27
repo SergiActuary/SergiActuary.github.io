@@ -194,6 +194,8 @@ header.nav {
 .logo-fastapi { -webkit-mask-image: url(logos/fastapi.svg); mask-image: url(logos/fastapi.svg); }
 .logo-docker  { -webkit-mask-image: url(logos/docker.svg);  mask-image: url(logos/docker.svg); }
 .logo-sql     { -webkit-mask-image: url(logos/sql.svg);     mask-image: url(logos/sql.svg); }
+.logo-bash    { -webkit-mask-image: url(logos/bash.svg);    mask-image: url(logos/bash.svg); }
+.logo-linux   { -webkit-mask-image: url(logos/linux.svg);   mask-image: url(logos/linux.svg); }
 @media (prefers-reduced-motion: reduce) {
   .marquee-track { animation: none; flex-wrap: wrap; justify-content: center; width: auto; gap: 36px; }
   .marquee-track .logo { margin-right: 0; }
