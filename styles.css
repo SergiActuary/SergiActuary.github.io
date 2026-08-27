@@ -154,7 +154,38 @@ header.nav {
 
 /* ===================== CHIPS ===================== */
 .chips { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 20px; }
-.hero-stack { margin-top: 26px; }
+
+/* ===================== CINTA DE TECNOLOGÍAS ===================== */
+.marquee-band { padding: 28px 0; border-top: 1px solid var(--border); }
+.marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+.marquee-track { display: flex; align-items: center; gap: 64px; width: max-content; animation: marquee 26s linear infinite; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.logo {
+  flex-shrink: 0; width: 42px; height: 42px;
+  background-color: var(--text-soft);
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-position: center; mask-position: center;
+  -webkit-mask-size: contain; mask-size: contain;
+  opacity: .78; transition: opacity .2s ease;
+}
+.marquee:hover .logo { opacity: 1; }
+.logo-python { -webkit-mask-image: url(logos/python.svg); mask-image: url(logos/python.svg); }
+.logo-pandas { -webkit-mask-image: url(logos/pandas.svg); mask-image: url(logos/pandas.svg); }
+.logo-numpy  { -webkit-mask-image: url(logos/numpy.svg);  mask-image: url(logos/numpy.svg); }
+.logo-polars { -webkit-mask-image: url(logos/polars.svg); mask-image: url(logos/polars.svg); }
+.logo-numba  { -webkit-mask-image: url(logos/numba.svg);  mask-image: url(logos/numba.svg); }
+.logo-r      { -webkit-mask-image: url(logos/r.svg);      mask-image: url(logos/r.svg); }
+.logo-git    { -webkit-mask-image: url(logos/git.svg);    mask-image: url(logos/git.svg); }
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; flex-wrap: wrap; justify-content: center; width: auto; gap: 40px; }
+  .marquee-track [aria-hidden="true"] { display: none; }
+  .marquee { -webkit-mask-image: none; mask-image: none; }
+}
 .chip {
   font-family: var(--mono); font-size: .8rem; letter-spacing: -.01em;
   padding: 5px 11px; border-radius: 7px;
