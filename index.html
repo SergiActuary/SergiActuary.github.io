@@ -83,31 +83,13 @@
           <a href="#contacto" class="btn btn-primary">Escríbeme</a>
         </div>
       </div>
-      <div class="code-cards" aria-hidden="true">
-        <a class="code-card" href="https://github.com/SergiActuary" target="_blank" rel="noopener" aria-label="Ver mi GitHub">
-          <div class="cc-head">
-            <span class="cc-dot"></span><span class="cc-dot"></span><span class="cc-dot"></span>
-            <span class="cc-name">reservas.py</span>
-            <span class="cc-gh">↗ GitHub</span>
-          </div>
-<pre class="cc-code"><span class="k">import</span> lifeflow <span class="k">as</span> lf
-bel = lf.reserves(cartera, i=<span class="n">0.02</span>)</pre>
-        </a>
-        <div class="code-card">
-          <div class="cc-head">
-            <span class="cc-dot"></span><span class="cc-dot"></span><span class="cc-dot"></span>
-            <span class="cc-name">mortality.py</span>
-          </div>
-<pre class="cc-code">tabla.p(x=<span class="n">45</span>, t=<span class="n">10</span>)   <span class="c"># 0.9721</span></pre>
+      <div class="grid-viz" aria-hidden="true">
+        <div class="gv-head">
+          <span class="gv-tick"></span>
+          <span class="gv-title">bel_grid</span>
+          <span class="gv-dim">N × T</span>
         </div>
-        <div class="code-card">
-          <div class="cc-head">
-            <span class="cc-dot"></span><span class="cc-dot"></span><span class="cc-dot"></span>
-            <span class="cc-name">solvencia.py</span>
-          </div>
-<pre class="cc-code">df.group_by(<span class="s">"producto"</span>)
-  .agg(pl.col(<span class="s">"bel"</span>).sum())</pre>
-        </div>
+        <div class="gv-cells" id="gvCells"></div>
       </div>
     </div>
   </section>
@@ -244,6 +226,31 @@ bel = lf.reserves(cartera, i=<span class="n">0.02</span>)</pre>
         }
       }
       tick();
+    })();
+
+    (function () {
+      var host = document.getElementById('gvCells');
+      if (!host) return;
+      var COLS = 8, ROWS = 5, N = COLS * ROWS, cells = [];
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function val() { return Math.random().toFixed(2).slice(1); }
+      for (var i = 0; i < N; i++) {
+        var c = document.createElement('span');
+        c.className = 'gv-cell';
+        c.style.setProperty('--i', Math.floor(i / COLS) + (i % COLS));
+        c.textContent = val();
+        host.appendChild(c);
+        cells.push(c);
+      }
+      if (reduce) return;
+      setInterval(function () {
+        for (var k = 0; k < 3; k++) {
+          var c = cells[(Math.random() * cells.length) | 0];
+          c.textContent = val();
+          c.classList.add('gv-flash');
+          (function (cc) { setTimeout(function () { cc.classList.remove('gv-flash'); }, 600); })(c);
+        }
+      }, 900);
     })();
   </script>
 </body>
