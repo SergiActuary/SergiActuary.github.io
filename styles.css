@@ -106,6 +106,9 @@ header.nav {
 .btn-primary:hover { box-shadow: 0 8px 22px color-mix(in srgb, var(--accent) 38%, transparent); }
 .btn-ghost { background: var(--card); color: var(--text); }
 .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+.btn-github { background: var(--accent-soft); color: var(--accent); border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); }
+.btn-github svg { width: 18px; height: 18px; fill: currentColor; }
+.btn-github:hover { border-color: var(--accent); color: var(--accent); box-shadow: 0 8px 24px color-mix(in srgb, var(--accent) 32%, transparent); }
 
 /* Malla de datos animada (N×T) en el hero */
 .grid-viz { flex-shrink: 0; width: 350px; max-width: 100%; background: var(--card); border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--shadow); overflow: hidden; }
