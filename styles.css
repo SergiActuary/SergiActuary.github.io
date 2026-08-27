@@ -173,7 +173,7 @@ header.nav {
 .marquee:hover .marquee-track { animation-play-state: paused; }
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .logo {
-  flex-shrink: 0; width: 42px; height: 42px; margin-right: 64px;
+  flex-shrink: 0; width: 42px; height: 42px; margin-right: 80px;
   background-color: var(--text-soft);
   -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
   -webkit-mask-position: center; mask-position: center;
@@ -190,6 +190,7 @@ header.nav {
 .logo-git    { -webkit-mask-image: url(logos/git.svg);    mask-image: url(logos/git.svg); }
 .logo-fastapi { -webkit-mask-image: url(logos/fastapi.svg); mask-image: url(logos/fastapi.svg); }
 .logo-docker  { -webkit-mask-image: url(logos/docker.svg);  mask-image: url(logos/docker.svg); }
+.logo-sql     { -webkit-mask-image: url(logos/sql.svg);     mask-image: url(logos/sql.svg); }
 @media (prefers-reduced-motion: reduce) {
   .marquee-track { animation: none; flex-wrap: wrap; justify-content: center; width: auto; gap: 36px; }
   .marquee-track .logo { margin-right: 0; }

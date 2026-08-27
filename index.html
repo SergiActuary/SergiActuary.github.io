@@ -95,27 +95,31 @@
   </section>
 
   <!-- ===================== CINTA DE TECNOLOGÍAS ===================== -->
-  <div class="marquee-band" aria-label="Tecnologías que uso: Python, pandas, NumPy, Polars, Numba, FastAPI, Docker, Git, R">
-    <div class="marquee">
-      <div class="marquee-track">
-        <i class="logo logo-python" title="Python"></i>
-        <i class="logo logo-pandas" title="pandas"></i>
-        <i class="logo logo-numpy" title="NumPy"></i>
-        <i class="logo logo-polars" title="Polars"></i>
-        <i class="logo logo-numba" title="Numba"></i>
-        <i class="logo logo-fastapi" title="FastAPI"></i>
-        <i class="logo logo-docker" title="Docker"></i>
-        <i class="logo logo-git" title="Git"></i>
-        <i class="logo logo-r" title="R"></i>
-        <i class="logo logo-python" aria-hidden="true"></i>
-        <i class="logo logo-pandas" aria-hidden="true"></i>
-        <i class="logo logo-numpy" aria-hidden="true"></i>
-        <i class="logo logo-polars" aria-hidden="true"></i>
-        <i class="logo logo-numba" aria-hidden="true"></i>
-        <i class="logo logo-fastapi" aria-hidden="true"></i>
-        <i class="logo logo-docker" aria-hidden="true"></i>
-        <i class="logo logo-git" aria-hidden="true"></i>
-        <i class="logo logo-r" aria-hidden="true"></i>
+  <div class="marquee-band" aria-label="Tecnologías que uso: Python, pandas, NumPy, Polars, Numba, SQL, FastAPI, Docker, Git, R">
+    <div class="wrap">
+      <div class="marquee">
+        <div class="marquee-track">
+          <i class="logo logo-python" title="Python"></i>
+          <i class="logo logo-pandas" title="pandas"></i>
+          <i class="logo logo-numpy" title="NumPy"></i>
+          <i class="logo logo-polars" title="Polars"></i>
+          <i class="logo logo-numba" title="Numba"></i>
+          <i class="logo logo-sql" title="SQL"></i>
+          <i class="logo logo-fastapi" title="FastAPI"></i>
+          <i class="logo logo-docker" title="Docker"></i>
+          <i class="logo logo-git" title="Git"></i>
+          <i class="logo logo-r" title="R"></i>
+          <i class="logo logo-python" aria-hidden="true"></i>
+          <i class="logo logo-pandas" aria-hidden="true"></i>
+          <i class="logo logo-numpy" aria-hidden="true"></i>
+          <i class="logo logo-polars" aria-hidden="true"></i>
+          <i class="logo logo-numba" aria-hidden="true"></i>
+          <i class="logo logo-sql" aria-hidden="true"></i>
+          <i class="logo logo-fastapi" aria-hidden="true"></i>
+          <i class="logo logo-docker" aria-hidden="true"></i>
+          <i class="logo logo-git" aria-hidden="true"></i>
+          <i class="logo logo-r" aria-hidden="true"></i>
+        </div>
       </div>
     </div>
   </div>
@@ -231,26 +235,35 @@
     (function () {
       var host = document.getElementById('gvCells');
       if (!host) return;
-      var COLS = 8, ROWS = 5, N = COLS * ROWS, cells = [];
+      var COLS = 8, ROWS = 5, rows = [];
       var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      function val() { return Math.random().toFixed(2).slice(1); }
-      for (var i = 0; i < N; i++) {
-        var c = document.createElement('span');
-        c.className = 'gv-cell';
-        c.style.setProperty('--i', Math.floor(i / COLS) + (i % COLS));
-        c.textContent = val();
-        host.appendChild(c);
-        cells.push(c);
+      // Cada fila = una cohorte; el BEL_t decae a lo largo de t (run-off).
+      function series() {
+        var v = 0.8 + Math.random() * 0.9, d = 0.72 + Math.random() * 0.15, a = [];
+        for (var t = 0; t < COLS; t++) { a.push(v); v *= d; }
+        return a;
+      }
+      for (var r = 0; r < ROWS; r++) {
+        var vals = series(), rowCells = [];
+        for (var c = 0; c < COLS; c++) {
+          var el = document.createElement('span');
+          el.className = 'gv-cell';
+          el.style.setProperty('--i', r + c);
+          el.textContent = vals[c].toFixed(2);
+          host.appendChild(el);
+          rowCells.push(el);
+        }
+        rows.push(rowCells);
       }
       if (reduce) return;
       setInterval(function () {
-        for (var k = 0; k < 3; k++) {
-          var c = cells[(Math.random() * cells.length) | 0];
-          c.textContent = val();
-          c.classList.add('gv-flash');
-          (function (cc) { setTimeout(function () { cc.classList.remove('gv-flash'); }, 600); })(c);
-        }
-      }, 900);
+        var r = (Math.random() * ROWS) | 0, vals = series();
+        rows[r].forEach(function (el, c) {
+          el.textContent = vals[c].toFixed(2);
+          el.classList.add('gv-flash');
+          setTimeout(function () { el.classList.remove('gv-flash'); }, 650);
+        });
+      }, 1100);
     })();
   </script>
 </body>
